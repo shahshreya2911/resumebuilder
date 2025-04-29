@@ -34,7 +34,7 @@ function Register() {
         <div className='auth-parent'>
             {loading && <Spin size="large" />}
             <Form layout='vertical' onFinish={onFinish}>
-                <h1 className='brand'>Apurv's Resume Building Website</h1>
+                <h1 className='brand'>Resume Building Website</h1>
 
                 <h1>Login</h1>
                 <hr />

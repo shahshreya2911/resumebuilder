@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
+import LandingPage from './pages/LandingPage';
 import Profile from './pages/Profile';
 import Templates from './pages/templates';
 
@@ -19,6 +20,7 @@ function App() {
           <Route path='/home' element={<ProtectedRoute><Home /></ProtectedRoute>} />
           <Route path='/profile' element={<ProtectedRoute><Profile /></ProtectedRoute>} />
           <Route path='/templates/:id' element={<ProtectedRoute><Templates /></ProtectedRoute>} />
+          <Route path='/index' element={<LandingPage />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
 
@@ -37,6 +39,6 @@ export function ProtectedRoute(props) {
     return props.children;
   }
   else {
-    return <Navigate to='/login' />
+    return <Navigate to='/index' />
   }
 }
